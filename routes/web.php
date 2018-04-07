@@ -20,6 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/booking', function () {
-    return view('booking');
-});
+// Route::get('/booking', function () {
+//     return view('booking');
+// });
+
+Route::get('index','BookingController@index');
+Route::post('store','BookingController@store');
