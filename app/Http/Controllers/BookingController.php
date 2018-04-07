@@ -23,6 +23,8 @@ class BookingController extends Controller
     	$user -> time = Input::get('time');
     	$user -> save();
 
+    	return redirect('booking');
+
 
     }
 }

@@ -12,8 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('booking');
 });
+
 
 Auth::routes();
 
@@ -26,3 +27,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('index','BookingController@index');
 Route::post('store','BookingController@store');
+
+Route::get('admin','AdminController@admin');
+Route::post('store1','AdminController@store1');
+Route::get('view-records','AdminController@admin');
+
+Route::get('bookingTable','BookingTableController@bookingTable');
+Route::get('return','BookingTableController@return');
